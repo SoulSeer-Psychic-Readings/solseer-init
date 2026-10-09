@@ -100,9 +100,9 @@ beforeEach(() => {
   detail.reading.id = "reading-1";
   mocks.api.mockResolvedValue({ participantToken: "participant-token" });
   mocks.init.mockResolvedValue(instance);
-  mocks.join.mockResolvedValue(undefined);
-  mocks.leave.mockResolvedValue(undefined);
-  mocks.refresh.mockResolvedValue(undefined);
+  mocks.join.mockResolvedValue();
+  mocks.leave.mockResolvedValue();
+  mocks.refresh.mockResolvedValue();
   vi.spyOn(window, "confirm").mockReturnValue(true);
 });
 

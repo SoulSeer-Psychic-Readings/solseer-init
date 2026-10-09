@@ -266,7 +266,7 @@ function PostThread({
         is_reply: Boolean(parentId),
       });
       setReply("");
-      setParentId(undefined);
+      setParentId();
       await thread.refresh();
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : "Unable to reply.");
@@ -344,7 +344,7 @@ function PostThread({
               {parentId && (
                 <small>
                   Replying to a comment{" "}
-                  <button type="button" onClick={() => setParentId(undefined)}>
+                  <button type="button" onClick={() => setParentId()}>
                     Cancel
                   </button>
                 </small>

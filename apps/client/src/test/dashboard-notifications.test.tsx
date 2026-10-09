@@ -35,7 +35,7 @@ function setup() {
 beforeEach(() => {
   vi.clearAllMocks();
   mocks.api.mockResolvedValue({ reader: { phoneNumber: "+15551234567", smsNotificationsEnabled: false } });
-  mocks.refresh.mockResolvedValue(undefined);
+  mocks.refresh.mockResolvedValue();
 });
 afterEach(cleanup);
 
