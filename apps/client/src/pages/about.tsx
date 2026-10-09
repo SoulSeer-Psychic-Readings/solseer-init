@@ -26,8 +26,8 @@ export function AboutPage() {
             they earn and play an active role in shaping the platform.
           </p>
           <p>
-            SoulSeer is more than just an app - it's a soul tribe. A community
-            of gifted psychics united by our life's calling: to guide, heal, and
+            SoulSeer is more than just an app - it&apos;s a soul tribe. A community
+            of gifted psychics united by our life&apos;s calling: to guide, heal, and
             empower those who seek clarity on their journey.
           </p>
           <Link className="button" to="/readers">
