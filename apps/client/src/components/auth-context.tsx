@@ -139,7 +139,7 @@ export function Protected({
       <main className="page-shell">
         <section className="profile-load-error" role="alert">
           <p className="eyebrow">Your sanctuary is still here</p>
-          <h1>We couldn't open your dashboard.</h1>
+          <h1>We couldn&apos;t open your dashboard.</h1>
           <p>
             {auth.profileError ??
               "Your profile could not be loaded. Please try again."}
