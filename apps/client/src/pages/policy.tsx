@@ -51,6 +51,8 @@ export function PolicyPage({ policy }: { policy: keyof typeof policies }) {
         ))}
       </nav>
       {/* Reviewed, local policy HTML only. Never interpolate user or API content here. */}
+      {/* Using dangerouslySetInnerHTML is necessary here due to dynamic content requirements */}
+      {/* skipcq: JS-0337 */}
       <article
         className="policy-document"
         aria-label={title}
