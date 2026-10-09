@@ -8,7 +8,7 @@ export function createStripe(env: Pick<Env, "STRIPE_SECRET_KEY">): Stripe {
   });
 }
 
-export async function constructStripeEvent(
+export function constructStripeEvent(
   stripe: Stripe,
   rawBody: string,
   signature: string,

@@ -124,8 +124,8 @@ export class ReadingCoordinator extends DurableObject<Env> {
     await this.finalize(state, Date.now(), "participant_requested_end");
   }
 
-  async getSnapshot(): Promise<CoordinatorState> {
-    return this.mustState();
+  getSnapshot(): Promise<CoordinatorState> {
+    return Promise.resolve(this.mustState());
   }
 
   override async alarm(): Promise<void> {

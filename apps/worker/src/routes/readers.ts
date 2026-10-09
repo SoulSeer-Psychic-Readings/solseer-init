@@ -55,7 +55,7 @@ async function listReaders(env: Env, onlineOnly: boolean) {
         eq(users.status, "active"),
       );
 
-  return db
+  return await db
     .select(readerSelect())
     .from(readerProfiles)
     .innerJoin(users, eq(users.id, readerProfiles.userId))
