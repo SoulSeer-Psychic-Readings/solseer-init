@@ -29,7 +29,11 @@ it("preserves reader invitation and return destination in the email signup callb
   fireEvent.change(screen.getByLabelText("Password"), { target: { value: "test-password" } });
   fireEvent.click(screen.getByRole("button", { name: "Create account" }));
   await waitFor(() => expect(signUp).toHaveBeenCalledTimes(1));
-  const callback = new URL(signUp.mock.calls[0]![0].callbackURL);
+  const call0 = signUp.mock.calls[0]?.[0];
+  if (!call0) {
+    throw new Error('Expected signUp.mock.calls[0][0] to be defined');
+  }
+  const callback = new URL(call0.callbackURL);
   expect(callback.searchParams.get("readerInvite")).toBe("test-invitation");
   expect(callback.searchParams.get("returnTo")).toBe("/dashboard");
 });
