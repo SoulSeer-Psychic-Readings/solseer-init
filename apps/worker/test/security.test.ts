@@ -128,7 +128,7 @@ describe("API security boundaries", () => {
 
   it("rejects invalid readerId query parameter for admin upload capability request", async () => {
     const testApp = new Hono<AppBindings>();
-    testApp.post("/test-capability", async (c) => {
+    testApp.post("/test-capability", (c) => {
       c.set("user", {
         id: "11111111-1111-1111-1111-111111111111",
         role: "admin",

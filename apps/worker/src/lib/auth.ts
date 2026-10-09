@@ -85,7 +85,7 @@ export async function verifyIdentityToken(
   }
 }
 
-async function verifyIdentity(token: string, env: Env): Promise<AuthIdentity> {
+function verifyIdentity(token: string, env: Env): Promise<AuthIdentity> {
   return verifyIdentityToken(
     token,
     neonAuthIssuer(env.NEON_AUTH_ISSUER),

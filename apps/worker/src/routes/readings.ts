@@ -450,7 +450,7 @@ function inArrayStatus<T extends string>(
   return values.includes(value as T);
 }
 
-async function history(env: Env, role: "client" | "reader", userId: string) {
+function history(env: Env, role: "client" | "reader", userId: string) {
   const { db } = createDatabase(env.DATABASE_URL);
   const counterpart =
     role === "client" ? readingSessions.readerId : readingSessions.clientId;
